@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style type="text/css">
+  	body
+  	{
+  		background-color: blue;
+  	}
+  	.as
+  	{
+  		border-radius: 10px;
+  		margin-top: 100px;
+  		display: block;
+  		border:1px solid black;
+  		width: 900px;
+  		height: 400px;
+  		background-color: pink;
+  		box-shadow: 0px 0px 15px 5px #999;
+  		/*box-shadow:5px 3px 5px 10px grey;*/
+  		/*-webkit-transition: width 2s, height 4s;*/
+  		transition:3s;
+  		/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        /*transform:rotate3d(90,90,90,360)*/
+        animation: rotate 5s linear infinite;
+       
+  	}
+  	@keyframes rotate
+  	{
+  		100%{transform: rotate(360deg);}
+  		from{background-color: red;}
+     	to{background-color:blue; }
+  	}
+  	.as:hover
+  	{
+  		transform: scale(1.2);
+  	}
+  	.btn1
+  	{
+  		animation: rotate 10s linear infinite;
+  		padding: 10px;
+  		color: black;
+  		font-size: 12px;
+  		margin-top: 50px;
+  		border-radius: 24px;
+  		outline: none;
+  		background-color: pink;
+  	}
+  	.btn1:hover
+  	{
+  		outline: none;
+  		font-weight: bold;
+  		animation-play-state: paused;
+  	}
+  </style>
+  <script type="text/javascript">
+  	$(document).ready(function()
+  	{
+  		$('.btn1').click(function()
+  		{
+          $('.as').toggle();
+  		});
+  	});
+  </script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			<button class="btn1">Toggle Me</button>
+		</div>
+		<div class="col-4 as">
+			<form>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+		</div>
+		<div class="col-4"></div>
+	</div>
+</div>
+</body>
+</html>
